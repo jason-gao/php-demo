@@ -1,0 +1,13 @@
+{
+    "name": "jason-gao/php-demo",
+    "authors": [
+        {
+            "name": "jason-gao",
+            "email": "gaolu@yundun.com"
+        }
+    ],
+    "require": {
+        "alibabacloud/sdk": "^1.7",
+        "monolog/monolog": "2.0.0-beta2"
+    }
+}
