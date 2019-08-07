@@ -2,13 +2,13 @@
 
 
 function main() {
-    while(1){
+//    while(1){
         for ($i = 0; $i < 3; $i++) {
             echo $i.'-';
         }
         echo PHP_EOL;
-        sleep(1);
-    }
+//        sleep(3);
+//    }
 }
 
 for ($i = 1; $i <= 5; ++$i) {
@@ -27,4 +27,13 @@ for ($i = 1; $i <= 5; ++$i) {
 while (pcntl_waitpid(0, $status) != -1) {
     $status = pcntl_wexitstatus($status);
     echo "Child $status completed\n";
+
+//    $pid = pcntl_fork(); // 创建子进程
+//
+//    if (!$pid) {
+//        sleep(1);
+//        print "In child-- $i\n";
+//        main();
+//        exit($i);
+//    }
 }
