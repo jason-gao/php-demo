@@ -23,8 +23,7 @@ print_r($stack);
  */
 
 
-//配置文件处理
-function readEnvConfig()
+function readEnvConfig($config = [])
 {
     $envConf = preg_grep('/^PHPREDMIN_/', array_keys($_ENV));
     if (!empty($envConf)) {
@@ -32,7 +31,7 @@ function readEnvConfig()
             $keys = explode('_', $conf);
             if (!empty($keys)) {
                 array_shift($keys);
-                setConfig($this->_data['config'], $keys, $_ENV[$conf]);
+                setConfig($config, $keys, $_ENV[$conf]);
             }
         }
     }
